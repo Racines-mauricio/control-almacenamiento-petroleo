@@ -26,7 +26,7 @@ session_start();
     </a>
     <br><br><br>
     <main>
-        <h1>Control de almacenamiento de petroleo <?php echo $_SESSION['user_name']; ?></h1>
+        <h1>Control de almacenamiento de combustible <?php echo $_SESSION['user_name']; ?></h1>
         <form action="server/task/create.php" method="post" class="my-form">
             <label for="due_date" class="field">
                 <span>Release date:</span>
@@ -36,30 +36,16 @@ session_start();
                 <span>Quantity: </span>
                 <input type="text" name="quantity" placeholder="quantity" id="quantity" />
             </label>
-            <label for="origin" class="field">
-                <span>Origin: </span>
-                <input type="text" name="origin" placeholder="origin" id="origin" />
-            </label>
-            
-            <!--
-            <label for="user_id" class="field">
-                <span>
-                    <span class="req-field">*</span>
-                    User id:
-                </span>
--->
+
             <input type="hidden" name="user_id" placeholder="user_id" id="user_id" required
                 value="<?php echo $_SESSION['user_id']; ?>" />
-            <!--</label>-->
-            <label for="category_id" class="field">
+            <label for="fuel_id" class="field">
                 <span>
                     <span class="req-field">*</span>
-                    Category:
+                    Fuel:
                 </span>
-                <!--
-                <input type="number" name="category_id" placeholder="category_id" id="category_id" required />
-                -->
-                <select id="category-list" name="category_id" class="form-control form-control-sm" required>
+
+                <select id="category-list" name="fuel_id" class="form-control form-control-sm" required>
 
                 </select>
             </label>

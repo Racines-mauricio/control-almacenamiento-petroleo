@@ -1,0 +1,103 @@
+/* css/fuels.css */
+
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* LAYOUT GENERAL */
+body {
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+    color: #333;
+    padding: 2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* FORMULARIO DE FUEL */
+#fuel-form {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto 2rem;
+}
+
+#fuel-form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+#fuel-form .field span {
+    margin-bottom: 0.3rem;
+}
+
+#fuel-form input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+#fuel-form button {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+#fuel-form button:hover {
+    background-color: #0056b3;
+}
+
+/* MENSAJES */
+#message {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* TABLA DE LISTADO */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+thead th {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody td {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+}

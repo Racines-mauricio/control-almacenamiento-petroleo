@@ -4,7 +4,7 @@ $host = 'localhost';
 $port = '5432';
 $user = 'postgres';
 $pass = 'bshg1422';
-$db_name = 'oil_barrel_control';
+$db_name = 'register_fuel';
 
 
 

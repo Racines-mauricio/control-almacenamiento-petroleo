@@ -3,7 +3,7 @@
 $host = 'localhost';
 $port = '5432';
 $user = 'postgres';
-$pass = 'bshg1422';
+$pass = '1004612579';
 $db_name = 'register_fuel';
 
 

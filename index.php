@@ -21,8 +21,8 @@ session_start();
     <button type="submit" class="edit-btn right-align">Usuarios</button>
     </a>
     <br><br><br>
-    <a href="pages/drivers.php">
-    <button type="submit" class="edit-btn right-align">Conductores</button>
+    <a href="pages/fuel.php">
+    <button type="submit" class="edit-btn right-align">Combustibles</button>
     </a>
     <br><br><br>
     <main>
@@ -37,21 +37,21 @@ session_start();
                 <input type="text" name="quantity" placeholder="quantity" id="quantity" />
             </label>
 
-            <input type="hidden" name="user_id" placeholder="user_id" id="user_id" required
-                value="<?php echo $_SESSION['user_id']; ?>" />
-            <label for="fuel_id" class="field">
+            <input type="hidden" name="id_user" placeholder="id_user" id="id_user" required
+                value="<?php echo $_SESSION['id_user']; ?>" />
+            <label for="id_fuel" class="field">
                 <span>
                     <span class="req-field">*</span>
                     Fuel:
                 </span>
 
-                <select id="category-list" name="fuel_id" class="form-control form-control-sm" required>
+                <select id="fuel-list" name="id_fuel" class="form-control form-control-sm" required>
 
                 </select>
             </label>
             <button type="submit">Enviar</button>
         </form>
-        <ul id="task-list"></ul>
+        <ul id="register-list"></ul>
     </main>
 </body>
 

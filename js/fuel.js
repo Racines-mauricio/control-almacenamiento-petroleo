@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fuelList = document.getElementById('fuel_list');
 
-    function loadfuels() {
+    function loadFuels() {
 
         fuelList.innerHTML = '';
         console.log("Runing");
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 if (data.id_user) {
                     console.log('Sesión activa para usuario:', data.id_user);
-                    fetch('/control-almacenamiento-petroleo/server/category/filter_by_user.php?user_id=' + data.id_user)
+                    fetch('/control-almacenamiento-petroleo/server/fuel/filter_by_user.php?id_user=' + data.id_user)
                         .then(response => response.json())
                         .then(fl => {
                             console.log(fl);
@@ -24,10 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                     row.innerHTML =
                                         '<td>' + fuel.id + '</td>' +
                                         '<td>' + fuel.type + '</td>' +
-                                        '<td>' + fuel.id_user + '</td>' +
                                         '<td>' + fuel.create_at + '</td>';
 
-                                    fuelListList.appendChild(row);
+                                    fuelList.appendChild(row);
                                 }
                             );
                         });
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    loadfuels();
+    loadFuels();
 
     document.getElementById('fuel-form').addEventListener('submit',
         function (e) {
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         message.textContent = data.message;
                         message.style.color = 'green';
                         this.reset();
-                        loadfuels();
+                        loadFuels();
                     }
                     else {
                         message.textContent = data.message;

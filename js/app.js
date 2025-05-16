@@ -89,9 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('server/user/session_info.php')
             .then(res => res.json())
             .then(data => {
-                if (data.user_id) {
+                if (data.id_user) {
                     console.log('Sesión activa para usuario:', data.id_user);
-                    fetch('server/fuel/filter_by_user.php?user_id=' + data.id_user)
+                    fetch('server/fuel/filter_by_user.php?id_user=' + data.id_user)
                         .then(response => response.json())
                         .then(fl => {
                             console.log(fl);

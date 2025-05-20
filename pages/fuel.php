@@ -23,8 +23,8 @@ session_start();
             </span>
             <input type="text" name="type" placeholder="type" id="type" required />
         </label>
-        <input type="hidden" name="id_user" placeholder="id_user" id="id_user" required
-            value="<?php echo $_SESSION['id_user']; ?>" />
+        <input type="hidden" name="user_id" placeholder="user_id" id="user_id" required
+            value="<?php echo $_SESSION['user_id']; ?>" />
         <button type="submit">Guardar</button>
     </form>
     <div id="message"></div>
@@ -36,7 +36,7 @@ session_start();
             <th>Tipo</th>
             <th>Fecha creado</th>
         </thead>
-        <tbody id="fuel-list">
+        <tbody id="fuel_list">
 
         </tbody>
     </table>

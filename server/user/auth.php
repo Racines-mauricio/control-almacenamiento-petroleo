@@ -14,9 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if (isset($user)) {
-        $_SESSION['id_user'] = $user['id'];
+        $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['name'];
-        header('Location: /control-almacenamiento-petroleo/index.php');
+        header('Location: /control-almacenamiento-petroleo/pages/menu.php');
         exit;
     } else {
         header('Location: login.php?error=1');

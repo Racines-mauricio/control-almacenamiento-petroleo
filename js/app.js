@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const registerInput = document.getElementById('register-input');
     const registerList = document.getElementById('register-list');
-    const fuelList = document.getElementById('fuel-list');
+    const fuelList = document.getElementById('fuel_list');
 
     let registers = [];
     let isEditing = false;
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(res => res.json())
             .then(data => {
                 if (data.user_id) {
-                    console.log('Sesión activa para usuario:', data.id_user);
-                    fetch('server/register/index.php?id_user=' + data.id_user)
+                    console.log('Sesión activa para usuario:', data.user_id);
+                    fetch('server/register/index.php?user_id=' + data.user_id)
                         .then(response => response.json())
                         .then(rgt => {
                             console.log(rgt);
@@ -89,9 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('server/user/session_info.php')
             .then(res => res.json())
             .then(data => {
-                if (data.id_user) {
-                    console.log('Sesión activa para usuario:', data.id_user);
-                    fetch('server/fuel/filter_by_user.php?id_user=' + data.id_user)
+                if (data.user_id) {
+                    console.log('Sesión activa para usuario:', data.user_id);
+                    fetch('server/fuel/filter_by_user.php?user_id=' + data.user_id)
                         .then(response => response.json())
                         .then(fl => {
                             console.log(fl);

@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('/control-almacenamiento-petroleo/server/user/session_info.php')
             .then(res => res.json())
             .then(data => {
-                if (data.id_user) {
-                    console.log('Sesión activa para usuario:', data.id_user);
-                    fetch('/control-almacenamiento-petroleo/server/fuel/filter_by_user.php?id_user=' + data.id_user)
+                if (data.user_id) {
+                    console.log('Sesión activa para usuario:', data.user_id);
+                    fetch('/control-almacenamiento-petroleo/server/fuel/filter_by_user.php?user_id=' + data.user_id)
                         .then(response => response.json())
                         .then(fl => {
                             console.log(fl);

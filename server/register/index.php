@@ -2,13 +2,13 @@
 require '../commons/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    if (isset($_GET['id_user'])) {
+    if (isset($_GET['user_id'])) {
         try {
-            $id_user = $_GET['id_user'];
-            $q = "SELECT * FROM register_fuel.register WHERE id_user = :usr_id";
+            $user_id = $_GET['user_id'];
+            $q = "SELECT * FROM register_fuel.register WHERE user_id = :usr_id";
             $stmt = $db->prepare($q);
             $stmt->execute([
-                "usr_id" => $id_user
+                "usr_id" => $user_id
             ]);
             $registers = $stmt->fetchAll(PDO::FETCH_ASSOC);
             echo json_encode($registers);

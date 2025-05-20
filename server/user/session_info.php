@@ -2,9 +2,9 @@
 session_start();
 header('Content-Type: application/json');
 
-if (isset($_SESSION['id_user'])) {
+if (isset($_SESSION['user_id'])) {
     echo json_encode([
-        'id_user' => $_SESSION['id_user'],
+        'user_id' => $_SESSION['user_id'],
         'user_name' => $_SESSION['user_name']
     ]);
 } else {

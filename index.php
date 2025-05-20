@@ -12,10 +12,17 @@ session_start();
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
     <script src='js/app.js'></script>
 </head>
-
+<header>
+        <h1>Fuel - Nariño</h1>
+        <a href="/control-almacenamiento-petroleo/pages/menu.php">
+        <button id= "regresar" class="left-align">Regresar</button>
+        </a>
+    </header>
 <body>
     <main>
-        <h1>Registro de ingresos <?php echo $_SESSION['user_name']; ?></h1>
+        <br>
+        <h1>Registro de ingresos</h1>
+        <br>
         <form action="server/register/create.php" method="post" class="my-form">
             <label for="due_date" class="field">
                 <span>Release date:</span>
@@ -23,7 +30,7 @@ session_start();
             </label>
             <label for="quantity" class="field">
                 <span>Quantity: </span>
-                <input type="text" name="quantity" placeholder="quantity" id="quantity" />
+                <input type="number" name="quantity_barrel" placeholder="quantity" id="quantity_barrel" />
             </label>
 
             <input type="hidden" name="user_id" placeholder="user_id" id="user_id" required

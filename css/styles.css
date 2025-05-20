@@ -9,10 +9,21 @@
 
 /* LAYOUT GENERAL */
 body {
-    background-color: #f9f9f9;
-    font-family: sans-serif;
-    color: #333;
-    padding: 2rem;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+}
+/*CABECERA*/
+header {
+    background-color: var(--rojo-quemado);
+    padding: 3rem;
+    text-align: center;
+}
+
+/*ubicacion del boton regresar*/
+#regresar {
+    margin-left: 1100px;
 }
 
 main {
@@ -20,17 +31,17 @@ main {
     margin: 0 auto;
 }
 
-/* ENCABEZADO */
-h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
+/* TITULO ENCABEZADO */
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
+
 
 /* BOTONES DE NAVEGACIÓN */
 .delete-btn,
 .edit-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 2.0rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -95,20 +106,45 @@ h1 {
     font-size: 1rem;
 }
 
-.my-form button[type="submit"] {
-    background-color: #28a745;
-    color: white;
-    width: 100%;
-    padding: 0.6rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 1rem;
+:root {
+    --rojo-quemado: #B22222;
+    --gris-oscuro: #2E2E2E;
+    --amarillo-petroleo: #FFD700;
+    --gris-claro: #D3D3D3;
+    --blanco: #FFFFFF;
 }
 
-.my-form button[type="submit"]:hover {
-    background-color: #218838;
+
+.my-form button[type="submit"] {
+    background-color: var(--amarillo-petroleo);
+    color: var(--gris-oscuro);
+    padding: 0.75rem 2.0rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+
+button {
+    background-color: var(--amarillo-petroleo);
+    color: var(--gris-oscuro);
+    padding: 0.75rem 2.0rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffe23f;
+}
+
+#cerrar {
+    margin-left: 1200px;
 }
 
 /* LISTA DE TAREAS */

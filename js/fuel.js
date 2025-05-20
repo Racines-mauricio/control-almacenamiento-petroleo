@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(data => {
                     if (data.success) {
                         message.textContent = data.message;
-                        message.style.color = 'green';
+                        message.style.color = 'red';
                         this.reset();
                         loadFuels();
                     }

@@ -13,6 +13,10 @@ session_start();
     <script src='../js/fuel.js'></script>
 </head>
 
+<header>
+    <h1>Fuel - Nariño</h1>
+</header>
+
 <body>
     <h2>Tipo de combustible <?php echo $_SESSION['user_name']; ?></h2>
     <form id="fuel-form">
@@ -30,6 +34,7 @@ session_start();
     <div id="message"></div>
     <hr>
     <h2>Listado de combustibles</h2>
+    <main>
     <table>
         <thead>
             <th>Id</th>
@@ -40,7 +45,7 @@ session_start();
 
         </tbody>
     </table>
-
+    </main>
 </body>
 
 </html>

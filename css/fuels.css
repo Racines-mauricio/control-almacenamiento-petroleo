@@ -1,5 +1,14 @@
 /* css/fuels.css */
 
+:root {
+    --rojo-quemado: #B22222;
+    --gris-oscuro: #2E2E2E;
+    --amarillo-petroleo: #FFD700;
+    --gris-claro: #D3D3D3;
+    --blanco: #FFFFFF;
+}
+
+
 /* RESET BÁSICO */
 * {
     box-sizing: border-box;
@@ -9,21 +18,39 @@
 
 /* LAYOUT GENERAL */
 body {
-    background-color: #f9f9f9;
-    font-family: sans-serif;
-    color: #333;
-    padding: 2rem;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+
 }
 
-h2 {
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
+
+header {
+    background-color: var(--rojo-quemado);
+    padding: 2.5rem;
     text-align: center;
 }
 
+header h1 {
+    background-color: var(--rojo-quemado);
+    padding: 1rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--blanco);
+    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+
 /* FORMULARIO DE FUEL */
 #fuel-form {
-    background: white;
+    background: var(--gris-claro);
     padding: 1.2rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -44,14 +71,14 @@ h2 {
 
 #fuel-form input {
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gris-oscuro);
     border-radius: 6px;
     font-size: 1rem;
 }
 
 #fuel-form button {
-    background-color: #007bff;
-    color: white;
+    background-color: var(--amarillo-petroleo);
+    color: var(--gris-oscuro);
     width: 100%;
     padding: 0.6rem;
     border: none;
@@ -62,29 +89,35 @@ h2 {
 }
 
 #fuel-form button:hover {
-    background-color: #17c250;
+    background-color: #f1e645;
 }
 
 /* MENSAJES */
 #message {
     text-align: center;
     margin-top: 1rem;
-    font-size: 0.9rem;
+    font-size: 18px;
 }
 
 /* TABLA DE LISTADO */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    background: var(--gris-claro);
+    box-shadow: 0 1px 4px var(--gris-oscuro);
     border-radius: 6px;
     overflow: hidden;
+
 }
 
 thead {
-    background-color: #007bff;
-    color: white;
+    background-color: var(--amarillo-petroleo);
+    color: var(--gris-oscuro);
 }
 
 thead th {
@@ -94,10 +127,11 @@ thead th {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #969494;
 }
 
 tbody td {
     padding: 0.7rem;
     font-size: 0.9rem;
+    color: #2E2E2E;
 }

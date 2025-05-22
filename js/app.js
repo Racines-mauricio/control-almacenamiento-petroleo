@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let registers = [];
     let isEditing = false;
     let editingId = null;
-    
+
     function renderRegisters() {
         console.log("Runing");
         fetch('server/user/session_info.php')
@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     if (register.completed) {
                                         li.className = 'register-ready';
                                         li.innerHTML =
-                                            '<span>' + register.due_date + '</span>';
+                                            '<span>' + '<h3> ID: ' + register.id_fuel + '<h3> CANTIDAD BARRILES: ' + register.quantity_barrel + '<h3> FECHA: ' + register.due_date + '</span>';
                                     }
                                     else {
                                         li.innerHTML =
-                                            '<span>' + register.due_date + '</span>' +
+                                            '<span>' + '<h3> ID: ' + register.id_fuel + '<h3> CANTIDAD BARRILES: ' + register.quantity_barrel + '<h3> FECHA: ' + register.due_date + '</span>' +
                                             '<div>' +
                                             '<button class="complete-btn" onclick="completeRegister(' + register.id + ')">' +
                                             'Completar </button>' +

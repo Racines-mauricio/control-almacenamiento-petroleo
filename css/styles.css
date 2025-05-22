@@ -61,12 +61,12 @@ header h1 {
 }
 
 .edit-btn {
-    background-color: #17a2b8;
+    background-color: var(--amarillo-petroleo);
     color: white;
 }
 
 .edit-btn:hover {
-    background-color: #138496;
+    background-color: #ffe23f;
 }
 
 /* ALINEACIÓN */
@@ -149,7 +149,7 @@ button:hover {
     margin-left: 1200px;
 }
 
-/* LISTA DE TAREAS */
+/* LISTA DE REGISTROS */
 #task-list {
     list-style: none;
 }

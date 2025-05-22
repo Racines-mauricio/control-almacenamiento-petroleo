@@ -1,5 +1,3 @@
-/* css/fuels.css */
-
 :root {
     --rojo-quemado: #B22222;
     --gris-oscuro: #2E2E2E;
@@ -7,7 +5,6 @@
     --gris-claro: #D3D3D3;
     --blanco: #FFFFFF;
 }
-
 
 /* RESET BÁSICO */
 * {
@@ -22,9 +19,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--gris-oscuro);
     color: var(--blanco);
-
 }
-
 
 header {
     background-color: var(--rojo-quemado);
@@ -45,8 +40,6 @@ h2 {
     margin-bottom: 1rem;
     text-align: center;
 }
-
-
 
 /* FORMULARIO DE FUEL */
 #fuel-form {
@@ -112,7 +105,6 @@ table {
     box-shadow: 0 1px 4px var(--gris-oscuro);
     border-radius: 6px;
     overflow: hidden;
-
 }
 
 thead {
@@ -135,3 +127,37 @@ tbody td {
     font-size: 0.9rem;
     color: #2E2E2E;
 }
+
+/* BOTONES DE ACCIÓN */
+.edit-btn,
+.delete-btn {
+    margin: 5px 5px 5px 0;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+.edit-btn {
+    background-color: var(--amarillo-petroleo);
+    color: var(--gris-oscuro);
+    font-weight: 700;
+}
+
+.edit-btn:hover {
+    background-color: #f1e645;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+

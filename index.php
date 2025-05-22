@@ -13,40 +13,38 @@ session_start();
     <script src='js/app.js'></script>
 </head>
 <header>
-        <h1>Fuel - Nariño</h1>
-        <a href="/control-almacenamiento-petroleo/pages/menu.php">
-        <button id= "regresar" class="left-align">Regresar</button>
-        </a>
-    </header>
+    <h1>Fuel - Nariño</h1>
+    <a href="/control-almacenamiento-petroleo/pages/menu.php">
+        <button id="regresar" class="left-align">Regresar</button>
+    </a>
+</header>
+
 <body>
     <main>
         <br>
         <h1>Registro de ingresos</h1>
         <br>
-        <form action="server/register/create.php" method="post" class="my-form">
+        <form id="register-form" class="my-form">
+            <input type="hidden" id="register-id" name="id" value="" />
             <label for="due_date" class="field">
                 <span>Release date:</span>
-                <input type="date" name="due_date" placeholder="due_date" id="due_date" />
+                <input type="date" name="due_date" id="due_date" required />
             </label>
-            <label for="quantity" class="field">
+            <label for="quantity_barrel" class="field">
                 <span>Quantity: </span>
-                <input type="number" name="quantity_barrel" placeholder="quantity" id="quantity_barrel" />
+                <input type="number" name="quantity_barrel" id="quantity_barrel" required />
             </label>
 
-            <input type="hidden" name="user_id" placeholder="user_id" id="user_id" required
-                value="<?php echo $_SESSION['user_id']; ?>" />
-            <label for="id_fuel" class="field">
-                <span>
-                    <span class="req-field">*</span>
-                    Fuel:
-                </span>
+            <input type="hidden" name="user_id" id="user_id" required value="<?php echo $_SESSION['user_id']; ?>" />
 
-                <select id="fuel_list" name="id_fuel" class="form-control form-control-sm" required>
-
-                </select>
+            <label for="fuel_list" class="field">
+                <span><span class="req-field">*</span> Fuel:</span>
+                <select id="fuel_list" name="id_fuel" required></select>
             </label>
-            <button type="submit">Enviar</button>
+            <button type="submit" id="submit-btn">Enviar</button>
+            <button type="button" id="cancel-edit-btn" style="display:none;">Cancelar</button>
         </form>
+
         <ul id="register-list"></ul>
     </main>
 </body>

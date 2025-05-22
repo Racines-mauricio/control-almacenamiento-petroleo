@@ -40,6 +40,7 @@ session_start();
             <th>Id</th>
             <th>Tipo</th>
             <th>Fecha creado</th>
+            <th></th>
         </thead>
         <tbody id="fuel_list">
 

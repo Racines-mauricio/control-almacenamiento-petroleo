@@ -17,9 +17,10 @@ session_start();
     
     <header>
         <h1>Fuel - Nariño</h1>
-        <a action="../server/user/logout.php" method="get">
-        <button id= "cerrar"type="submit" class="delete-btn left-align">Cerrar sesión</button>
-        </a>
+        <form action="../server/user/logout.php" method="post" style="display: inline;">
+            <button type="submit" class="delete-btn left-align" id="cerrar">Cerrar sesión</button>
+        </form>
+
     </header>
 
     <main>
